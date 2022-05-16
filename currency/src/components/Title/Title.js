@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Title() {
+const Title = (props) => {
     return (
         <div>
             <h1>
-                Currency Converter
+                {props.title || 'Default Title'}
             </h1>
         </div>
     )

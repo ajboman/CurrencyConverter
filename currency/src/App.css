@@ -1,29 +1,2 @@
 .App{
-  color: black;
-}
-
-.Title {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: rgb(192, 45, 26);
-  color: #fff;
-}
-
-.TypeSelect { 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: baseline;
-  padding: 1%;
-  color: black;
-}
-
-.AmountInput {
-  display: flex;
-  justify-content: space-evenly;
-  color: blue;
 }

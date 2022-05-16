@@ -5,11 +5,6 @@ class AmountInput extends React.Component {
         return (
             <div>
                 <input type='text' />
-                <p>
-                    idk how to comment so i put it here.
-                    start with removing the double to space the items properly
-                </p>
-                <input type='text' />
             </div>
         )
     }
