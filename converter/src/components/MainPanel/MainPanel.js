@@ -6,11 +6,11 @@ const MainPanel = () => {
     return (
         <Container className='container'>
             <Row>
-                <Col md={1}>md=1</Col>
+                <Col md={1}></Col>
                 <Col md={10}>
                     <ConverterForm />
                 </Col>
-                <Col md={1}>md=1</Col>
+                <Col md={1}></Col>
             </Row>
         </Container>
     );

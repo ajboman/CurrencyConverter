@@ -15,3 +15,10 @@ function App() {
 }
 
 export default App;
+
+// To do:
+// 1. make API connection
+// 2. pull data from API
+// 3. save inputs for global access
+// 4. button does the math
+// 5. display results
