@@ -8,14 +8,25 @@ const TypeSelect1 = (props) => {
         { value: 'euro', label: 'Euro' }
     ]
 
-
     const [selectedOption, setSelectedOption] = useState('');
-   
+
+    const handleChange = selectedOption => {
+        setSelectedOption(selectedOption);
+        if (props.id==1) {
+            props.setCurrentCurrency(selectedOption.value);
+        }
+        else if (props.id==2){
+            props.setDesiredCurrency(selectedOption.value);
+        }
+      };
+
+
+
     return (
         <div>
             <Select
                 value={selectedOption}
-                onChange={(selectedOption) => { setSelectedOption(selectedOption) }}
+                onChange={handleChange}
                 options={options}
             />
         </div>

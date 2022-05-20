@@ -13,10 +13,26 @@ import AmountForm from '../AmountForm/AmountForm';
 
 const ConverterForm = (props) => {
 
-    const [currentCurrency, setCurrentCurrency] = useState('CAD');
-    const [desiredCurrency, setDesiredCurrency] = useState('USD');
-    const [currentAmount, setCurrentAmount] = useState(100);
+    const [currentCurrency, setCurrentCurrency] = useState('');
+    const [desiredCurrency, setDesiredCurrency] = useState('');
+    const [currentAmount, setCurrentAmount] = useState('');
     const [desiredAmount, setDesiredAmount] = useState(100);
+    const [currenciesList, setCurrenciesList] = useState('');
+
+    // const componentDidMount = () => {
+    //     return (
+    //     axios.get('')
+    //     .then(res => {
+    //         const currenciesList = res.currenciesList;
+    //         this.setCurrenciesList={setCurrenciesList};
+    //     })
+    //     );
+    // }
+
+
+
+
+
 
     return (
         <Container>
@@ -24,7 +40,7 @@ const ConverterForm = (props) => {
                 <Col>
                     <div className='TypeConverter'>
                         Current:
-                        <TypeConverter chosen={''} />
+                        <TypeConverter setCurrentCurrency={setCurrentCurrency} id={1}/>
                     </div>
                     <div className='AmountForm'>
                         <AmountForm setCurrentAmount={setCurrentAmount} />
@@ -34,12 +50,14 @@ const ConverterForm = (props) => {
                     </div>
                 </Col>
                 <Col>
-                    <Button style={{marginTop: '150%' }} variant="dark">Convert From { currentCurrency } to { desiredCurrency }</Button>
+                    <Button style={{marginTop: '150%' }} variant="dark">
+                        Convert From { currentCurrency } to { desiredCurrency }
+                    </Button>
                 </Col>
                 <Col>
                     <div className='TypeConverter'>
                         Desired:
-                        <TypeConverter />
+                        <TypeConverter setDesiredCurrency={setDesiredCurrency} id={2}/>
                     </div>
                 </Col>
             </Row>

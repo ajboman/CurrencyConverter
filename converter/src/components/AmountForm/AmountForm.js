@@ -4,7 +4,7 @@ import React from 'react';
 
 const AmountInput = (props) => {
 
-  const [amount, setAmount] = useState(100);
+  const [amount, setAmount] = useState('');
 
   const handleChange = (e) => {
     setAmount(e.target.value);
