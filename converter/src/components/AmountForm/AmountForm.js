@@ -7,13 +7,16 @@ const AmountInput = (props) => {
   const [amount, setAmount] = useState('');
 
   const handleChange = (e) => {
-    setAmount(e.target.value);
-    props.setCurrentAmount(e.target.value);
+    setAmount((v) => e.target.validity.valid ? e.target.value : v);
+    props.setCurrentAmount((v) => e.target.validity.valid ? e.target.value : v);
   };
 
   return (
     <fieldset>
-      <input value={amount}
+      <input 
+        type='text'
+        pattern="[0-9.]*"
+        value={amount}
         onChange={handleChange} />
     </fieldset>
   );

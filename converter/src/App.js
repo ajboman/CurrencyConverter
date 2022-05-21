@@ -5,6 +5,8 @@ import './App.css';
 import Title from './components/Title/Title';
 import MainPanel from './components/MainPanel/MainPanel';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -15,10 +17,3 @@ function App() {
 }
 
 export default App;
-
-// To do:
-// 1. make API connection
-// 2. pull data from API
-// 3. save inputs for global access
-// 4. button does the math
-// 5. display results
